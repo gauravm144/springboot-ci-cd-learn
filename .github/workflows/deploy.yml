@@ -45,4 +45,5 @@ jobs:
         script: |
           pkill -f 'java -jar' || true
           cd /home/ubuntu/app
-           nohup java -jar springbootcicd-0.0.1.jar > app.log 2>&1 &
+          JAR=$(ls *.jar | head -n 1)
+          setsid java -jar "$JAR" > app.log 2>&1 < /dev/null &
