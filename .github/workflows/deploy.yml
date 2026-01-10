@@ -45,4 +45,4 @@ jobs:
         script: |
           pkill -f 'java -jar' || true
           cd /home/ubuntu/app
-          nohup java -jar *.jar > app.log 2>&1 &
+           nohup java -jar springbootcicd-0.0.1.jar > app.log 2>&1 &
