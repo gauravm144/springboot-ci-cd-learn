@@ -43,7 +43,6 @@ jobs:
         username: ${{ secrets.EC2_USER }}
         key: ${{ secrets.EC2_KEY }}
         script: |
-          pkill -f 'java -jar' || true
           cd /home/ubuntu/app
           JAR=$(ls *.jar | head -n 1)
           setsid java -jar "$JAR" > app.log 2>&1 < /dev/null &
