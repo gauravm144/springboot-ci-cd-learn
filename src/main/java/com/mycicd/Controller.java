@@ -14,6 +14,6 @@ public class Controller {
     
     @GetMapping("/hello/{id}")
     public String home(@PathVariable("id") String id){
-        return "Hello "+id;
+        return "Hello"+id;
     }
 }
